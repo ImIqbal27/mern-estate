@@ -27,6 +27,7 @@ app.use("/api/user", userRouter);
 // ///////////// for signup //////////////////////////////////////////
 app.use("/api/auth", authRouter);
 // //////////////  //////////////////////////////////////////////
+// ---------------------  next middleware --------------------------------
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   const message = err.message || "Internal Server Error ";
@@ -36,7 +37,9 @@ app.use((err, req, res, next) => {
     message,
   });
 });
+// ------------------------ my notes for coming date path --------------------
 // data coming path:
 // index.js -->
 // routes: auth.route.js -->
 // controllers: auth.controller.js
+// -----------------------------------------------------------------
