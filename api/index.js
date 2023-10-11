@@ -36,3 +36,7 @@ app.use((err, req, res, next) => {
     message,
   });
 });
+// data coming path:
+// index.js -->
+// routes: auth.route.js -->
+// controllers: auth.controller.js
